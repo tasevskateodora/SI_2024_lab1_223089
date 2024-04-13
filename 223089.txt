@@ -1,0 +1,34 @@
+mkdir SI_2024_lab1_223089 - pravime papka so ime SI_2024_lab1_223089
+cd SI_2024_lab1_223089 - vleguvame vo papkata
+git init - so ovaa komanda inicijalizirame lokalen repozitorium
+git remote add origin https://github.com/tasevskateodora/SI_2024_lab1_223089.git - gi povrzuvame lokalniot i remote repozitoriumot 
+notepad README.md - pravime datoteka README.md
+git add README.md - ja dodavame datotekata vo staged faza 
+git commit -m "Initial commit" - pravime commit
+git add SILab1Main.java SILab1_1.java SILab1_2.java - gi dodavame trite java fajlovi vo staged faza
+git commit -m "Add starter code" - im pravime commit 
+git push --all origin - go sinhronizirame lokalniot repozitorium so remote repozitoriumot
+git checkout -b bug2 - pravime nova granka bug2 i se prefrlame na nea
+git checkout -b bug1 - pravime nova granka bug1 i se prefrlame na nea
+git add SILab1_1.java - po promenata, go stavame fajlot vo staged faza
+git commit -m "Fix wrong condition in "filterOddLengthStrings" - pravime commit
+git checkout bug2 - se prefrlame na bug2
+git add SILab1_2.java - po promenata, go stavame fajlot vo staged faza
+git commit -m "Fix wrong condition in "Fix wrong condition in makeBigStringFrom" - pravime commit
+git checkout bug1 - se prefrlame na bug1
+git add SILab1Main.java - po promenata, go stavame fajlot vo staged faza
+git commit -m "Call method filterOddLengthStrings in main class." - pravime commit
+git checkout bug2 - se prefrlame na bug2
+git add SILab1Main.java - go stavame fajlot vo staged faza
+git commit -m "Call method makeBigStringFrom in main class." - pravime commit
+git push --all - go sinhronizirame lokalniot repozitorium so remote repozitoriumot
+git checkout master - se prefrlame na master 
+git merge bug1 - gi spojuvame master i bug1
+git push --all - go sinhronizirame lokalniot repozitorium so remote repozitoriumot
+git checkout bug2 - se prefrlame na bug2
+git rebase master - pravime rebase na grankata bug2 so master, no rezultira so konflikt
+git add SILab1Main.java - go stavame fajlot vo staged faza
+git rebase --continue - rebase komandata prodolzuva
+git checkout master - se prefrlame na master
+git merge bug2 - gi spojuvame master i bug2
+git push --all --force - gi stavame site granki koi gi imame do sega lokalno na git repozitoriumot prisilno
